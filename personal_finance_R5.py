@@ -35,7 +35,7 @@ with open(file, mode='r') as csv_file:
                     print("\nTransaction {}: {}\n".format(index, row[2:5]))
                     index += 1
                     transaction_value = row[3:4]
-                    list_cash_flow = transaction_value + list_cash_flow
+                    list_cash_flow += transaction_value
                     print("\nCash flow's list= {}\n".format(list_cash_flow))
                     cash_flow = sum(list_cash_flow)
                     print("{}'s Cash flow = {:.2f}$".format(MONTH, cash_flow))
